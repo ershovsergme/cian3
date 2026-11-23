@@ -1,0 +1,1 @@
+Synthetic pull request for the Cian workshop dashboard integration test.
