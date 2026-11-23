@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { UIKitPage } from './pages/UIKitPage';
 import { PrototypeProvider } from './hooks/PrototypeContext';
+import { MortgagePage } from './pages/MortgagePage';
 import {
   HomePage,
   SearchPage,
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="/listing/:id" element={<DetailPage />} />
+        <Route path="/mortgage/*" element={<MortgagePage />} />
         <Route path="/ui" element={<UIKitPage prototype />} />
         <Route path="/guide" element={<GuidePage />} />
         <Route path="/patterns" element={<PatternsPage />} />

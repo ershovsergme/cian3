@@ -10,6 +10,8 @@ npm run dev
 
 Маршруты: `/` → `/search` → `/listing/1`; `/ui`, `/patterns`, `/guide`.
 
+[Короткая ипотечная анкета](docs/mortgage-short-form.md): `/mortgage` → калькулятор → три шага → результат. Вход также есть из карточки квартиры.
+
 Начните с [первого прототипа](docs/first-prototype.md), [архитектуры](docs/prototyping.md), [референсов](docs/references/README.md) и [скилла cian-design](.agents/skills/cian-design/SKILL.md).
 
 Задачи практики — [tasks/](tasks/README.md), участники — [team/](team/README.md): у каждого свой файл `team/<github-логин>.md`. Свою работу ведите в ветке `<github-логин>/<задача>`.

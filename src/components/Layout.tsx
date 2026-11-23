@@ -82,11 +82,15 @@ export function Header() {
         className={clsx(s.nav, menu && s.navOpen)}
       >
         {navigation.map((label) =>
-          label === 'Продажа' ? (
+          label === 'Продажа' || label === 'Ипотека' ? (
             <NavLink
               key={label}
-              to="/search"
-              className={location.pathname.startsWith('/search') ? s.active : undefined}
+              to={label === 'Ипотека' ? '/mortgage' : '/search'}
+              className={
+                location.pathname.startsWith(label === 'Ипотека' ? '/mortgage' : '/search')
+                  ? s.active
+                  : undefined
+              }
               onClick={() => setMenu(false)}
             >
               {label}
@@ -126,11 +130,17 @@ export function Footer() {
             'Помощь',
             'Ипотечный калькулятор',
             'Карьера в Циане',
-          ].map((label) => (
-            <button key={label} onClick={() => showDemo(label)}>
-              {label}
-            </button>
-          ))}
+          ].map((label) =>
+            label === 'Ипотечный калькулятор' ? (
+              <Link key={label} to="/mortgage">
+                {label}
+              </Link>
+            ) : (
+              <button key={label} onClick={() => showDemo(label)}>
+                {label}
+              </button>
+            ),
+          )}
         </div>
         <p>
           Циан — база объявлений о продаже и аренде жилой, загородной и коммерческой недвижимости.

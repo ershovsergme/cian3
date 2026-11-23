@@ -259,6 +259,7 @@ export function Gallery({ images, title }: { images: string[]; title: string }) 
 
 export function ListingActions({ listing }: { listing: Listing }) {
   const { notify } = usePrototype();
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   return (
     <section className={s.actionsPanel} aria-label="Стоимость и связь">
@@ -267,6 +268,14 @@ export function ListingActions({ listing }: { listing: Listing }) {
         <FavoriteButton listing={listing} />
       </div>
       <p className="muted">{money(Math.round(listing.price / listing.area))}/м²</p>
+      <Button
+        fullWidth
+        theme="main_secondary"
+        beforeIcon="InfrastructureBank16"
+        onClick={() => navigate(`/mortgage?listing=${listing.id}`)}
+      >
+        Рассчитать ипотеку
+      </Button>
       <div className={s.facts}>
         <span>Условия сделки</span>
         <span>Свободная продажа</span>

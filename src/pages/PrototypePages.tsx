@@ -392,6 +392,19 @@ export function PatternsPage() {
             <Link to="/search?state=error">Ошибка и повторная попытка</Link>
             <Link to="/listing/unknown">Неизвестное объявление</Link>
           </div>
+          <h2>Короткая ипотечная анкета</h2>
+          <div className={s.patternLinks}>
+            <Link to="/mortgage">Калькулятор → анкета → результат</Link>
+            <Link to="/mortgage/application?case=empty">Пустые контакты</Link>
+            <Link to="/mortgage/application?case=consented">Согласие на рекламу уже есть</Link>
+            <Link to="/mortgage/application?case=error">Ошибка отправки и повтор</Link>
+            <Link to="/mortgage/application?case=profile-error">Ошибка загрузки профиля</Link>
+            <Link to="/mortgage/application?case=loading">Загрузка профиля</Link>
+            <Link to="/mortgage/status?case=active">Активная заявка</Link>
+            <Link to="/mortgage/status?case=issued">Ипотека выдана</Link>
+            <Link to="/mortgage/status?case=cancelled">Заявка отменена</Link>
+            <Link to="/mortgage/status?case=declined">Отказ по заявке</Link>
+          </div>
         </div>
       </PageLayout>
     </AppShell>
